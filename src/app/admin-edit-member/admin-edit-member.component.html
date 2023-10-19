@@ -1,0 +1,30 @@
+<app-header></app-header>
+<body>
+    <div class="text-center mt-4">
+        <h1>Edit Members</h1>
+        <form  action="" class="border p-5 my-4 container w-50 mb-5" style="background-color: rgba(2, 2, 2, 0.193);">
+            <label for=""><strong >Member Name</strong></label>
+            <input [(ngModel)]="pdata.mname" type="text" placeholder="Name" name="pname" id="pdtname" class="form-control mt-3">
+
+            <label for="" class="mt-2"><strong >Member Photo</strong></label>
+            <input [(ngModel)]="pdata.mimage" type="text" placeholder="Photo Link" name="des" id="d1" class="form-control mt-3">
+
+            <label for="" class="mt-2"><strong >Member Address</strong></label>
+            <textarea  [(ngModel)]="pdata.address" placeholder="Member Address" name="pri" id="d2" class="form-control mt-3" cols="30" rows="10"></textarea> 
+
+            <label for="" class="mt-2"><strong >Member Phone No</strong></label>
+            <input [(ngModel)]="pdata.phn" type="text" placeholder="Member Phone No" name="img" id="d3" class="form-control mt-3">
+
+            <label for="" class="mt-2"><strong >Id Proof</strong></label>
+            <input [(ngModel)]="pdata.idproof" type="text" placeholder="Member Id Proof(Photo link)" name="count" id="d5" class="form-control mt-3">
+
+            <label for="" class="mt-2"><strong >Description</strong></label>
+            <input [(ngModel)]="pdata.description" type="text" placeholder="Description" name="ds" id="d6" class="form-control mt-3">
+
+            <button (click)="editMember()" class="btn btn-dark mt-5">Update</button>
+        </form>
+        </div>
+        <button routerLink="/admin-view-member" id="btn1" class="btn btn-dark ms-3 mb-3">Back
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+</body>

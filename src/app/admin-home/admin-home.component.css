@@ -1,0 +1,56 @@
+body{
+    /* background-color: rgba(255, 228, 196, 0.648); */
+    background-color: #58f70979;
+
+}
+/* Webpixels CSS */
+/* Utility and component-centric Design System based on Bootstrap for fast, responsive UI development */
+/* URL: https://github.com/webpixels/css */
+
+@import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+
+/* Bootstrap Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+.container-fluid{
+    /* background-color: rgba(255, 228, 196, 0.442); */
+    background-color: #58f7092e;
+
+}
+#right {
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    transition: 1s;
+    /* background-image: url('https://www.smilefoundationindia.org/wp-content/uploads/2022/09/Banner1-scaled.jpg'); */
+    /* background-image: url('https://www.odysseycenter.com/wp-content/uploads/2017/11/Colorado-Charities-1024x682.jpeg'); */
+    background-image: url('https://www.merceradvisors.com/wp-content/uploads/2019/05/The-Benefits-of-Charitable-Giving-1024x682.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #right:before{
+    content: '';
+    position: fixed;
+    width: 70vw;
+    height: 100vh;
+    top: 0;
+    /* background: rgba(195, 231, 77, 0.449); */
+    /* background: rgba(255, 255, 255, 0.184); */
+    background: rgba(209, 244, 186, 0.211);
+
+    
+  }
+  .textdiv{
+    content: '';
+    position: fixed;
+    width: 40vw;
+    height: 30vh;
+    top: 5;
+    background-color: rgba(63, 69, 69, 0.278);
+    
+  }
+  .hh{
+    color: rgba(5, 25, 42, 0.704);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+

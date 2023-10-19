@@ -1,0 +1,78 @@
+form{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .js-tab-group{
+    margin-left: 30px;
+  }
+  .bg{
+    margin-left: 0px;
+    background-image: url("http://res.cloudinary.com/yashrg/image/upload/v1497018779/Screenshot_2017-06-09_07.26.52_eqnygk.png");
+    object-fit: contain;
+    width:1182px;
+    height: 340px;
+    overflow-x: hidden;
+  }
+  
+  .input-assist{
+    border-color: #e4d154;
+  /*   padding-right: 24px; */
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+  .input-assist:focus{
+    border-color: #e4d154;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075), 0 0 5px rgba(228, 209, 84, 0.5);
+  }
+  .input-assist-message{
+    font-size: 0.875rem;
+    line-height: 1.55rem;
+    padding: 0.3875rem 0.3875rem;
+    color: rgba(0,0,0,0.75);
+    background-color: #f3edc7;
+    border: 1px solid #e4d154;
+    position: relative;
+    margin-top: 0.5rem;
+    display: none;
+  }
+  .input-assist-message:before{
+    content:"";
+    position:absolute;
+    left: 11px;
+    top: -16px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border: 8px solid transparent;
+    border-bottom-color: #e4d154;
+  }
+  .input-assist-message:after{
+    content:"";
+    position:absolute;
+    left: 11px;
+    top: -15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border: 8px solid transparent;
+    border-bottom-color: #f3edc7;
+  }
+  .input-assist-message.is-active{
+    display: inline-block;
+  }
+  
+  .radio{
+    display: inline-block;
+    
+  }
+
+  .div1{
+    align-items: center;
+    justify-content: center;
+    background-color: #e4d154;
+    
+  }
+  .hh{
+    margin-left: 90px;
+  }

@@ -1,0 +1,53 @@
+<!-- <body onload="randombg()"> -->
+    <body>
+ 
+        <div class="container">
+          <div class="left">
+            <!-- <img src="" alt="img" height="70" width="90"> -->
+    
+            <!-- <img src="/assets/images/kovai-makkal.png" class="animation a6" style="margin: 0 auto 20px;width: 150px"> -->
+
+            <div class="header">
+          <img class="animation a6" src="https://st2.depositphotos.com/1364916/7242/v/450/depositphotos_72428813-stock-illustration-partners-friends-logo.jpg" height="70" width="60" alt=" " style="margin-left: 190px;">
+
+              <h2 class="animation a1">Mithra</h2>
+              <!-- <p class="animation a2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies sit amet erat at finibus. Praesent justo justo, fringilla sed tellus in, pellentesque eleifend tortor.</p> -->
+            </div>
+            <form [formGroup]="userForm" class="form" method="">
+              <input formControlName="email" type="text" class="form-field animation a3" name="un" placeholder="User">
+              <input formControlName="psw" type="password" class="form-field animation a4" name="ps" placeholder="Password">
+              <div class="animation a5" style="margin: 20px">
+                <input type="checkbox" id="check" class="animation a5" name=""><label for="check" style="padding-left: 10px;color: #afafaf">Remember my password</label>
+              </div>
+              <a  (click)="ulogin()" class="button animation a6">LOGIN </a>
+              <a  href="/adminlogin" class=" btn1 animation a6">LOGIN AS ADMIN </a>
+              <br>
+              <p class="me-5">Don't have any account click here</p>
+        
+        <a (click)="signup()" class=" mt-1 btn text-white text-center btn-info" >SIGN UP </a>
+    
+    
+            </form>
+            <button routerLink="" id="btn1" class="btn mt-5  mb-3" style="align-items: center; ">Home
+                <!-- <i class="fa fa-arrow-left" aria-hidden="true"></i> -->
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div id="right"></div>
+        </div>
+        
+      </body>
+    
+      <!-- <script>
+        function randombg() {
+      var random = Math.floor(Math.random() * 4) + 0;
+      var bigSize = [
+        "url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60')", 
+        "url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60')",
+        "url('https://images.unsplash.com/photo-1441794016917-7b6933969960?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60')",
+        "url('https://images.unsplash.com/photo-1491466424936-e304919aada7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1400&q=60')"
+      ];
+      document.getElementById("right").style.backgroundImage = bigSize[random];
+    }
+    
+      </script> -->

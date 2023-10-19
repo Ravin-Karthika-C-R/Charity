@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-animation-name: left;
+            animation-name: left;
+    -webkit-animation-duration: .8s;
+            animation-duration: .8s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+    margin-top: -50px;
+  }
+  
+  #right {
+    flex: 1;
+    background-color: black;
+    transition: 1s;
+    /* background-image: url('https://media.istockphoto.com/id/1060352206/photo/donate-food-to-hungry-people-concept-of-poverty-and-hunger.jpg?s=612x612&w=0&k=20&c=BB37IPajPeKo8fsJ3m7z2TOUmCbD0nnJo79ZXBg89sM='); */
+    background-image: url('https://images.unsplash.com/opengraph/1x1.png?auto=format&fit=crop&w=1200&h=630&q=60&mark-w=64&mark-align=top%2Cleft&mark-pad=50&blend-w=1&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&blend=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1488521787991-ed7bbaae773c%3Fcrop%3Dfaces%252Cedges%26cs%3Dtinysrgb%26fit%3Dcrop%26fm%3Djpg%26ixid%3DM3wxMjA3fDB8MXxzZWFyY2h8NXx8Y2hhcml0eXxlbnwwfHx8fDE2OTczOTAwMTh8MA%26ixlib%3Drb-4.0.3%26q%3D60%26w%3D1200%26auto%3Dformat%26h%3D630%26mark-w%3D750%26mark-align%3Dmiddle%252Ccenter%26blend-mode%3Dnormal%26blend-alpha%3D10%26mark%3Dhttps%253A%252F%252Fimages.unsplash.com%252Fopengraph%252Fsearch-input.png%253Fauto%253Dformat%2526fit%253Dcrop%2526w%253D750%2526h%253D84%2526q%253D60%2526txt-color%253D000000%2526txt-size%253D40%2526txt-align%253Dmiddle%25252Cleft%2526txt-pad%253D80%2526txt-width%253D660%2526txt-clip%253Dellipsis%2526txt%253Dcharity%26blend%3D000000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #right:before{
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background: rgba(130, 234, 52, 0.449);
+  }
+  
+  .header > h2 {
+    margin: 0;
+    color: #8eec50;
+    text-align: center;
+  }
+  
+  .header > p {
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4);
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  .form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .form > p {
+    text-align: right;
+  }
+  
+  .form > p > a {
+    color: #000;
+    font-size: 14px;
+  }
+  
+  .form-field {
+    height: 46px;
+    padding: 0 16px;
+    border: none;
+    border-bottom: 2px solid #d2e2ff;
+    background: linear-gradient(180deg, white, #f8faff);
+    border-radius: 4px;
+    font-family: sans-serif;
+    outline: 0;
+    transition: .2s;
+    margin-top: 20px;
+  }
+  
+  .form-field:focus {
+    border-color: #f1c40f;
+  }
+  .form > .btn1 {
+    padding: 12px 10px;
+    border: 0;
+    background: #ff3c3c;
+    border-radius: 3px;
+    margin-top: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  
+  .form > .button {
+    padding: 12px 10px;
+    border: 0;
+    background: #3c66ff;
+    border-radius: 3px;
+    margin-top: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  
+  .animation {
+  -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  .a1 {
+    -webkit-animation-delay: .9s;
+            animation-delay: .9s;
+  }
+  
+  .a2 {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  
+  .a3 {
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+  }
+  
+  .a4 {
+    -webkit-animation-delay: 1.4s;
+            animation-delay: 1.4s;
+  }
+  
+  .a5 {
+    -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+  }
+  
+  .a6 {
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s;
+  }
+  
+  @-webkit-keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 30%, 0);
+      transform: translate3d(0, 30%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 30%, 0);
+      transform: translate3d(0, 30%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @-webkit-keyframes left {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      padding: 20px 40px;
+      width: 500px;
+    }
+  }
+  @keyframes left {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      padding: 20px 40px;
+      width: 500px;
+    }
+  }

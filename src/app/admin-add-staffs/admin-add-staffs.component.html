@@ -1,0 +1,27 @@
+<app-header></app-header>
+<body>
+    <div class="text-center">
+        <h1 class="mt-4 text-center">Add Staffs</h1>
+        <form [formGroup]="addStaffForm" action="" class="border border-2 p-5 my-4 container w-50 mb-5" style="background-color: rgba(210, 242, 200, 0.23);">
+            <label for="" class="text-start">Staff Name</label>
+            <input formControlName="sname" type="text" placeholder="name" name="name" id="a1" class="form-control mt-3">
+
+            <label for="" class="mt-3">Login Id</label>
+            <input formControlName="loginid" type="email" placeholder="email" name="image" id="a2" class="form-control mt-3">
+
+            <label for="" class="mt-3">Phone No.</label>
+            <input formControlName="phone" type="text" placeholder="phn no" name="phn" id="a5" class="form-control mt-3">
+
+            <label for="" class="mt-3">Password</label>
+            <input formControlName="psw" type="password" placeholder="password" name="address" id="a3" class="form-control mt-3">
+
+            <label for="" class="mt-3">Confirm Password</label>
+            <input formControlName="cpsw" type="password" placeholder="confirm password" name="cn" id="a4" class="form-control mt-3">
+
+            <button (click)="addstaff()" class="btn btn-dark mt-5 text-center">add</button>
+        </form>
+        </div>
+        <button routerLink="/admin-product-mng" id="btn1" class="btn  ms-3 mb-3">Back
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+</body>

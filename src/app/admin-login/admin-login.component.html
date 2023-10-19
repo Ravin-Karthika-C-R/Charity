@@ -1,0 +1,28 @@
+<body>
+    <div class="app">
+        <div class="bg"></div>
+        <form [formGroup]="adminForm">
+            <header>
+                <!-- <img src="/assets/images/kovai-makkal.png" height="200"> -->
+                <label for="name" id="logo-text">
+                    <img class="mb-2" src="https://st2.depositphotos.com/1364916/7242/v/450/depositphotos_72428813-stock-illustration-partners-friends-logo.jpg" height="70" width="60" alt=""><br>
+                    <a href="" class="mt-5">Mithra</a>
+                  </label>
+            </header>
+      <div class="inputs">
+                <input formControlName="auname" type="text" name="an" id="a1" placeholder="username or email">
+                <input formControlName="apsw" type="password" name="ap" id="a2" placeholder="password">
+                    <p class="light"><a href="#">Forgot password?</a></p>
+            </div>
+            </form>
+    
+        <footer>
+            <button (click)="adminlogin()">Continue</button>
+            
+        </footer>
+        
+    </div>
+    <!-- <button routerLink="" id="btn1" class="btn mt-2 mb-3">Back
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button> -->
+    </body>

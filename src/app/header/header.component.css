@@ -1,0 +1,62 @@
+.navbar{
+  background-color: #58f70979;
+  
+}
+.toggle {
+  font-size: 1.5rem;
+  color: gray;
+  cursor: pointer;
+
+  display: none;
+}
+@media screen and (max-width: 600px) and (min-width: 200px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(244, 247, 250);
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    padding: 0 20px;
+    background-color: #fff;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 0 #ffffff, 5px 0 0 #f8f7f7;
+  }
+
+  #logo-text a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #5445f5;
+    font-weight: lighter;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .toggle {
+    font-size: 1.5rem;
+    color: gray;
+    cursor: pointer;
+
+    display: block;
+  }
+}
+
+.dropdown-menu{
+  background-color: rgba(9, 49, 0, 0.292);
+  color: #fff;
+}
