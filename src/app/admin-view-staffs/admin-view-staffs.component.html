@@ -21,7 +21,7 @@
           <td data-th="Password">{{i.phone}}</td>
           <td data-th="Password">{{i.psw}}</td>
           <td>
-            <button  class="btn btn-info mt-2 w-100"> <i class="fas fa-edit"></i>Edit </button>
+            <button (click)="editStaff(i._id)" class="btn btn-info mt-2 w-100"> <i class="fas fa-edit"></i>Edit </button>
             <button (click)="deleteAllStaff(i._id)" class="btn btn-danger mt-2 w-100"><i class="fa-solid fa-trash fa-xs"></i>Delete</button>
           </td>
         </tr>

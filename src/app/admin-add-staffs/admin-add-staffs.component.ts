@@ -35,9 +35,11 @@ export class AdminAddStaffsComponent implements OnInit{
       this.ds.addStaffs(staffData).subscribe({
         next:(result:any)=>{
           alert("New staff added")
-          this.route.navigateByUrl("admin-home")
+          // this.route.navigateByUrl("admin-home")
         }
       })
+      this.addStaffForm.reset()
+
     }
   }
 

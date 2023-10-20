@@ -14,6 +14,10 @@ import { AdminViewUsersComponent } from './admin-view-users/admin-view-users.com
 import { AdminViewDonationsComponent } from './admin-view-donations/admin-view-donations.component';
 import { AdminEditMemberComponent } from './admin-edit-member/admin-edit-member.component';
 import { AdminEditStaffComponent } from './admin-edit-staff/admin-edit-staff.component';
+import { AdminAddFundComponent } from './admin-add-fund/admin-add-fund.component';
+import { AdminViewFundComponent } from './admin-view-fund/admin-view-fund.component';
+import { AdminEditFundComponent } from './admin-edit-fund/admin-edit-fund.component';
+
 
 const routes: Routes = [
   {path:"",component:LandingComponent},
@@ -30,7 +34,11 @@ const routes: Routes = [
   {path:"admin-view-user",component:AdminViewUsersComponent},
   {path:"admin-view-donations",component:AdminViewDonationsComponent},
   {path:"admin-edit-member/:id",component:AdminEditMemberComponent},
-  {path:"admin-edit-staff",component:AdminEditStaffComponent}
+  {path:"admin-edit-staff/:id",component:AdminEditStaffComponent},
+  {path:"admin-add-fund",component:AdminAddFundComponent},
+  {path:"admin-view-fund",component:AdminViewFundComponent},
+  {path:"admin-edit-fund/:id",component:AdminEditFundComponent}
+ 
 ];
 
 @NgModule({

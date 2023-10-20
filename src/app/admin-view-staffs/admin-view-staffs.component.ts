@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-view-staffs',
@@ -8,7 +9,7 @@ import { DataService } from '../service/data.service';
 })
 export class AdminViewStaffsComponent implements OnInit{
   users:any=[] 
-  constructor(private ds:DataService){}
+  constructor(private ds:DataService,private route:Router){}
   ngOnInit(): void {
     this.getAllStaffs()
   }
@@ -20,6 +21,10 @@ export class AdminViewStaffsComponent implements OnInit{
     })
   }
 
+  editStaff(id:any){
+    this.route.navigateByUrl(`admin-edit-staff/${id}`)
+  }
+  
   deleteAllStaff(id:any){
     this.ds.deleteStaffs(id).subscribe({
       next:(result:any)=>{

@@ -1,0 +1,23 @@
+<app-header></app-header>
+<body>
+    <div class="text-center">
+        <h1 class="mt-4 text-center">Add Fund Raising</h1>
+        <form [formGroup]="addFundForm" action="" class="border border-2 p-5 my-4 container w-50 mb-5" style="background-color: rgba(210, 242, 200, 0.23);">
+            
+            <label for="" class="mt-3">Title</label>
+            <input formControlName="title" type="text" placeholder="title" name="address" id="a3" class="form-control mt-3">
+
+            <label for="" class="mt-3">Image</label>
+            <input formControlName="image"  type="text" placeholder="image link" name="image" id="a2" class="form-control mt-3">
+            
+            <label for="" class="mt-3">Description</label>
+            <textarea formControlName="description" type="text" placeholder="description of fund raising" name="cn" id="a4" class="form-control mt-3" cols="30" rows="10"></textarea>
+            
+            
+            <button (click)="addfund()" class="btn btn-dark mt-5 text-center">add</button>
+        </form>
+        </div>
+        <button routerLink="/admin-home" id="btn1" class="btn  ms-3 mb-3">Back
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+</body>

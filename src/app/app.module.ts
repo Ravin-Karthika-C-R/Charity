@@ -22,6 +22,10 @@ import { AdminViewUsersComponent } from './admin-view-users/admin-view-users.com
 import { AdminViewDonationsComponent } from './admin-view-donations/admin-view-donations.component';
 import { AdminEditMemberComponent } from './admin-edit-member/admin-edit-member.component';
 import { AdminEditStaffComponent } from './admin-edit-staff/admin-edit-staff.component';
+import { AdminAddFundComponent } from './admin-add-fund/admin-add-fund.component';
+import { AdminViewFundComponent } from './admin-view-fund/admin-view-fund.component';
+import { AdminEditFundComponent } from './admin-edit-fund/admin-edit-fund.component';
+
 
 
 @NgModule({
@@ -43,7 +47,11 @@ import { AdminEditStaffComponent } from './admin-edit-staff/admin-edit-staff.com
     AdminViewUsersComponent,
     AdminViewDonationsComponent,
     AdminEditMemberComponent,
-    AdminEditStaffComponent
+    AdminEditStaffComponent,
+    AdminAddFundComponent,
+    AdminViewFundComponent,
+    AdminEditFundComponent
+    
   ],
   imports: [
     BrowserModule,

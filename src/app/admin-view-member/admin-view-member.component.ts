@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-view-member.component.css']
 })
 export class AdminViewMemberComponent implements OnInit{
-  users:any=[]
+  members:any=[]
 
   constructor(private ds:DataService, private route:Router){}
   ngOnInit(): void {
@@ -18,7 +18,7 @@ export class AdminViewMemberComponent implements OnInit{
   getAllMembers(){
     this.ds.getMembers().subscribe({
       next:(result:any)=>{
-        this.users=result.message
+        this.members=result.message
       }
     })
   }

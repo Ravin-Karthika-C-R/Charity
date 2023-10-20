@@ -27,7 +27,7 @@ export class LoginComponent {
       },
       error:(result:any)=>{
         alert(result.error.message)
-        this.route.navigateByUrl("user-register")
+        // this.route.navigateByUrl("user-register")
       }
     })
   }

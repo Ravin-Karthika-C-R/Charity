@@ -1,1 +1,24 @@
-<p>admin-edit-staff works!</p>
+<app-header></app-header>
+<body>
+    <div class="text-center mt-4">
+        <h1>Edit Staffs</h1>
+        <form  action="" class="border p-5 my-4 container w-50 mb-5" style="background-color: rgba(2, 2, 2, 0.193);">
+            <label for=""><strong >Staff Name</strong></label>
+            <input [(ngModel)]="pdata.sname" type="text" placeholder="Name" name="pname" id="pdtname" class="form-control mt-3">
+
+            <label for="" class="mt-2"><strong >Login Id</strong></label>
+            <input [(ngModel)]="pdata.loginid" type="text" placeholder="email id" name="des" id="d1" class="form-control mt-3">
+
+            <label for="" class="mt-2"><strong >Phone Number</strong></label>
+            <input  [(ngModel)]="pdata.phone" placeholder="phone number" name="pri" id="d2" class="form-control mt-3">
+
+            <label for="" class="mt-2"><strong >Password</strong></label>
+            <input [(ngModel)]="pdata.psw" type="text" placeholder="password" name="img" id="d3" class="form-control mt-3">
+
+            <button (click)="editStaff()" class="btn btn-dark mt-5">Update</button>
+        </form>
+        </div>
+        <button routerLink="/admin-view-staffs" id="btn1" class="btn btn-dark ms-3 mb-3">Back
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+</body>

@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../service/data.service';
 
 @Component({
-  selector: 'app-admin-edit-member',
-  templateUrl: './admin-edit-member.component.html',
-  styleUrls: ['./admin-edit-member.component.css']
+  selector: 'app-admin-edit-fund',
+  templateUrl: './admin-edit-fund.component.html',
+  styleUrls: ['./admin-edit-fund.component.css']
 })
-export class AdminEditMemberComponent implements OnInit{
-  mid:any=""
+export class AdminEditFundComponent {
+  fid:any=""
   pdata:any={}
  
   constructor(private ar:ActivatedRoute, private ds:DataService, private route:Router){
@@ -17,9 +17,9 @@ export class AdminEditMemberComponent implements OnInit{
   ngOnInit(): void {
     this.ar.params.subscribe((data:any)=>{
       // console.log(data["id"]);
-      this.mid=data.id
+      this.fid=data.id
 
-      this.ds.getSingleMember(this.mid).subscribe({
+      this.ds.getSingleFundAdmin(this.fid).subscribe({
         next:(result:any)=>{
           // console.log(result.message);
           this.pdata=result.message
@@ -31,17 +31,14 @@ export class AdminEditMemberComponent implements OnInit{
       })
     }
 
-    editMember(){
-      this.ds.editMembers(this.mid,this.pdata).subscribe({
+    editFund(){
+      this.ds.editFundAdmin(this.fid,this.pdata).subscribe({
         next:(result:any)=>{
           // alert("Updated")
           alert(result.message)
-          this.route.navigateByUrl("admin-view-member")
+          this.route.navigateByUrl("admin-view-fund")
         }
       })
       
     }
-
-
-
 }

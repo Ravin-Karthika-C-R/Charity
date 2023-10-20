@@ -83,6 +83,16 @@
                             <i class="bi bi-people"></i> Users
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin-add-fund">
+                            <i class="fa-solid fa-dove"></i>Add Fund Raiser
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin-view-fund">
+                            <i class="fa-solid fa-piggy-bank"></i>View Fund Raiser
+                        </a>
+                    </li>
                     
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -90,7 +100,7 @@
                             </a>
                         </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="">
+                            <a (click)="logout()" class="nav-link" href="">
                                 <i class="bi bi-box-arrow-left"></i> Logout
                             </a>
                         </li>

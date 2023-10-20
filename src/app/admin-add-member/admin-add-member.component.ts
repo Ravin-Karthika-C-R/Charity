@@ -39,10 +39,13 @@ export class AdminAddMemberComponent implements OnInit{
       this.ds.addMembers(memberData).subscribe({
         next:(result:any)=>{
           alert("New member added")
-          this.route.navigateByUrl("admin-home")
+          // this.route.navigateByUrl("admin-home")
         }
       })
+      this.addMemberForm.reset()
+
     }
+
   }
 
 

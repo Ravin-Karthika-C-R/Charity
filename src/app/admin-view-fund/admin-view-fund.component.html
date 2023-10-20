@@ -1,0 +1,35 @@
+<app-header></app-header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<body>
+  <div class="container-fluid mb-5 text-center">
+    <h1 class="mt-5 mb-3 text-center">Fund Raiser Management</h1>
+    <table class="rwd-table text-center">
+      <tbody>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Photo</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let i of funds , let j=index">
+          <td data-th="#">{{j+1}}</td>
+          <td data-th="Name">{{i.title}}</td>
+          <td data-th="Password"><img src={{i.image}} alt="" height="100px"></td>
+          <td data-th="Password">{{i.description}}</td>
+          <td>
+            <button (click)="editFundPage(i._id)" class="btn btn-info mt-2 w-100"> <i class="fas fa-edit"></i>Edit </button>
+            <button (click)="deleteFundDetails(i._id)"  class="btn btn-danger mt-2 w-100"><i class="fa-solid fa-trash fa-xs"></i>Delete</button>
+          </td>
+        </tr>
+        <!-- (click)="editPage(i._id)" -->
+        <!-- (click)="deleteUser(i._id)" -->
+      </tbody>
+    </table>
+
+  </div>
+  <button routerLink="/admin-home" id="btn1" class="btn  ms-3 mb-3">Back
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button>
+</body>
