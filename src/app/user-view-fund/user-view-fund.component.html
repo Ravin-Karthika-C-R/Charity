@@ -1,0 +1,376 @@
+<!--
+
+Follow me on
+Dribbble: https://dribbble.com/supahfunk
+Twitter: https://twitter.com/supahfunk
+Codepen: https://codepen.io/supah/
+
+-->
+
+<app-user-header></app-user-header>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Order confirmation </title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+<style type="text/css">
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+  body { margin: 0; padding: 0; background: #e1e1e1; }
+  div, p, a, li, td { -webkit-text-size-adjust: none; }
+  .ReadMsgBody { width: 100%; background-color: #ffffff; }
+  .ExternalClass { width: 100%; background-color: #ffffff; }
+  body { width: 100%; height: 100%; background-color: #e1e1e1; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+  html { width: 100%; }
+  p { padding: 0 !important; margin-top: 0 !important; margin-right: 0 !important; margin-bottom: 0 !important; margin-left: 0 !important; }
+  .visibleMobile { display: none; }
+  .hiddenMobile { display: block; }
+
+  @media only screen and (max-width: 600px) {
+  body { width: auto !important; }
+  table[class=fullTable] { width: 96% !important; clear: both; }
+  table[class=fullPadding] { width: 85% !important; clear: both; }
+  table[class=col] { width: 45% !important; }
+  .erase { display: none; }
+  }
+
+  @media only screen and (max-width: 420px) {
+  table[class=fullTable] { width: 100% !important; clear: both; }
+  table[class=fullPadding] { width: 85% !important; clear: both; }
+  table[class=col] { width: 100% !important; clear: both; }
+  table[class=col] td { text-align: left !important; }
+  .erase { display: none; font-size: 0; max-height: 0; line-height: 0; padding: 0; }
+  .visibleMobile { display: block !important; }
+  .hiddenMobile { display: none !important; }
+  }
+</style>
+
+<body>
+  
+
+<!-- Header -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
+  <tr>
+    <td height="20"></td>
+  </tr>
+  <tr>
+    <td>
+      <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#ffffff" style="border-radius: 10px 10px 0 0;">
+        <tr class="hiddenMobile">
+          <td height="40"></td>
+        </tr>
+        <tr class="visibleMobile">
+          <td height="30"></td>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+              <tbody>
+                <tr>
+                  <td>
+                    <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="col">
+                      <tbody>
+                        <tr>
+                          <td align="left"> <img src="https://st2.depositphotos.com/1364916/7242/v/450/depositphotos_72428813-stock-illustration-partners-friends-logo.jpg" height="70" width="60" alt="logo" border="0" /></td>
+                        </tr>
+                        <tr class="hiddenMobile">
+                          <td height="40"></td>
+                        </tr>
+                        <tr class="visibleMobile">
+                          <td height="20"></td>
+                        </tr>
+                        <tr>
+                          <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;">
+                            Hello,{{uname}}.
+                            <br> Thank you for the donation.
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table width="220" border="0" cellpadding="0" cellspacing="0" align="right" class="col">
+                      <tbody>
+                        <tr class="visibleMobile">
+                          <td height="20"></td>
+                        </tr>
+                        <tr>
+                          <td height="5"></td>
+                        </tr>
+                        <tr>
+                          <td style="font-size: 21px; color: #ff0000; letter-spacing: -1px; font-family: 'Open Sans', sans-serif; line-height: 1; vertical-align: top; text-align: right;">
+                            Mithra
+                          </td>
+                        </tr>
+                        <tr>
+                        <tr class="hiddenMobile">
+                          <td height="50"></td>
+                        </tr>
+                        <tr class="visibleMobile">
+                          <td height="20"></td>
+                        </tr>
+                        <tr>
+                          <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: right;">
+                            
+                            <small>{{date | date : 'short'}}</small>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- /Header -->
+<!-- Order Details -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
+  <tbody>
+    <tr>
+      <td>
+        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#ffffff">
+          <tbody>
+            <tr>
+            <tr class="hiddenMobile">
+              <td height="60"></td>
+            </tr>
+            <tr class="visibleMobile">
+              <td height="40"></td>
+            </tr>
+            <tr>
+              <td>
+                <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+                  <tbody>
+                    <tr>
+                      <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
+                        Category
+                      </th>
+                      <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
+                        Payment Method
+                      </th>
+                      
+                      <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="left">
+                        Amount
+                      </th>
+                    </tr>
+                    <tr>
+                      <td height="1" style="background: #bebebe;" colspan="4"></td>
+                    </tr>
+                    <tr>
+                      <td height="10" colspan="4"></td>
+                    </tr>
+                    <tr>
+                      <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000;  line-height: 18px;  vertical-align: top; padding:10px 0;" class="article">
+                        {{fundtitle}}
+                      </td>
+                      <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000;  line-height: 18px;  vertical-align: top; padding:10px 0;" class="article">
+                        Online
+                      </td>
+                      <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e;  line-height: 18px;  vertical-align: top; padding:10px 0;" align="left">{{pdata.amount}}</td>
+                    </tr>
+                    <tr>
+                      <td height="1" colspan="4" style="border-bottom:1px solid #e4e4e4"></td>
+                    </tr>
+                    
+                    <tr>
+                      <td height="1" colspan="4" style="border-bottom:1px solid #e4e4e4"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="20"></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Order Details -->
+
+
+<!-- Information -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
+  <tbody>
+    <tr>
+      <td>
+        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#ffffff">
+          <tbody>
+            <tr>
+            <tr class="hiddenMobile">
+              <td height="60"></td>
+            </tr>
+            <tr class="visibleMobile">
+              <td height="40"></td>
+            </tr>
+            <tr>
+              <td>
+                <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="col">
+
+                          <tbody>
+                            <tr>
+                              <td style="font-size: 11px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1; vertical-align: top; ">
+                                <strong>BILLING INFORMATION</strong>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="10"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 20px; vertical-align: top; ">
+                                {{uname}}  <br> {{ph}}<br>  {{email}}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            
+            <tr class="hiddenMobile">
+              <td height="60"></td>
+            </tr>
+            <tr class="visibleMobile">
+              <td height="30"></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Information -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
+
+  <tr>
+    <td>
+      <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#ffffff" style="border-radius: 0 0 10px 10px;">
+        <tr>
+          <td>
+            <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+              <tbody>
+                <tr>
+                  <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;">
+                    Have a nice day.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          
+        </tr>
+        
+        <tr class="spacer">
+          <td height="50"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="20"></td>
+  </tr>
+</table>
+<!-- <div class="p-3 " style="text-align: center; margin-left: 400px;">
+  <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+    <tbody>
+      <tr>
+        <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;">
+          <button class="btn text-center .btn-lg" style="border-color: #681104; color: #ffffff; background-color: #0b0b0ba9" (click)="pdfExport()" > Print </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+</body>
+
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<body>
+  <div class="container-fluid mb-5 text-center">
+    <h1 class="mt-5 mb-3 text-center">Your Transaction History</h1>
+    <div *ngIf="spinner" class="text-center p-3">
+      <i class="fa-solid fa-spinner fa-3x fa-spin-pulse" style="color: #286467;"></i>
+    </div>
+  
+    <table *ngIf="!spinner"  class="rwd-table text-center">
+      <tbody>
+        <tr *ngFor="let i of funduser, let j=index">
+          
+          <th>Category</th>
+          <th>Account Holder Name</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+        <tr>
+          
+          <td data-th="Name">{{i.title}}</td>
+          <td data-th="Account Holder Name">{{i.fname}}</td>
+          <td data-th="Amount">{{i.amount}}</td>
+          <td data-th="Date">{{date | date : 'short'}}</td>
+
+          
+        </tr>
+        
+      </tbody>
+    </table>
+
+  </div>
+  <button routerLink="/user-home" id="btn1" class="btn  ms-3 mb-3">Back
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button> -->
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<body>
+  <div class="container-fluid mb-5 text-center">
+    <h1 class="mt-5 mb-3 text-center">Transaction History</h1>
+    <div *ngIf="spinner" class="text-center p-3">
+      <i class="fa-solid fa-spinner fa-3x fa-spin-pulse" style="color: #286467;"></i>
+    </div>
+    <table *ngIf="!spinner" class="rwd-table text-center">
+      <tbody>
+        <tr>
+          
+          <th>Category</th>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+        <tr>
+          
+          <td data-th="Category">{{pdata.title}}</td>
+          <td data-th="Name">{{pdata.fname}}</td>
+          <td data-th="Amount">{{pdata.amount}}</td>
+          <td data-th="date">{{date | date : 'short'}}</td>
+          
+        </tr>
+       
+      </tbody>
+    </table>
+
+  </div>
+  <button routerLink="/admin-home" id="btn1" class="btn  ms-3 mb-3">Back
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button>
+
+
+  
+</body> -->

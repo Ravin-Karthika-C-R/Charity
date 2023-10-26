@@ -1,0 +1,33 @@
+<app-user-header></app-user-header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<body>
+  <div class="container-fluid mb-5">
+    <h1 class="mt-5 mb-3">Your Donations</h1>
+    <table class="rwd-table text-center">
+      <tbody>
+        <tr>
+          <th>#</th>
+          <th>Item Name</th>
+          <th>Item Detail</th>
+          <th>Quantity</th>
+          <th>Pickup Date Time</th>
+        </tr>
+        <tr *ngFor="let i of items, let j=index">
+          <td data-th="#">{{j+1}}</td>
+          <td data-th="Item Name">{{i.itemname}}</td>
+          <td data-th="Item Details">{{i.detail}}</td>
+          <td data-th="Quantity">{{i.quantity}}</td>
+          <td data-th="Pick up Date Time">{{i.datetime | date: 'yyyy-MM-dd HH:mm' }}</td>
+          
+        </tr>
+        <!-- (click)="editPage(i._id)" -->
+        <!-- (click)="deleteUser(i._id)" -->
+      </tbody>
+    </table>
+
+  </div>
+  <button routerLink="/user-home" id="btn1" class="btn  ms-3 mb-3">Back
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button>
+</body>

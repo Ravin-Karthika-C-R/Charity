@@ -25,6 +25,14 @@ import { AdminEditStaffComponent } from './admin-edit-staff/admin-edit-staff.com
 import { AdminAddFundComponent } from './admin-add-fund/admin-add-fund.component';
 import { AdminViewFundComponent } from './admin-view-fund/admin-view-fund.component';
 import { AdminEditFundComponent } from './admin-edit-fund/admin-edit-fund.component';
+import { UserDonatePageComponent } from './user-donate-page/user-donate-page.component';
+import { AdminViewUserfunddetailsComponent } from './admin-view-userfunddetails/admin-view-userfunddetails.component';
+import { UserSeperateDonationPageComponent } from './user-seperate-donation-page/user-seperate-donation-page.component';
+import { UserFormDonationComponent } from './user-form-donation/user-form-donation.component';
+import { FilterPipe } from './charityPipes/filter.pipe';
+import { UserViewFundComponent } from './user-view-fund/user-view-fund.component';
+import { UserViewItemDonationComponent } from './user-view-item-donation/user-view-item-donation.component';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -50,7 +58,14 @@ import { AdminEditFundComponent } from './admin-edit-fund/admin-edit-fund.compon
     AdminEditStaffComponent,
     AdminAddFundComponent,
     AdminViewFundComponent,
-    AdminEditFundComponent
+    AdminEditFundComponent,
+    UserDonatePageComponent,
+    UserViewFundComponent,
+    AdminViewUserfunddetailsComponent,
+    UserSeperateDonationPageComponent,
+    UserFormDonationComponent,
+    FilterPipe,
+    UserViewItemDonationComponent
     
   ],
   imports: [
@@ -60,7 +75,7 @@ import { AdminEditFundComponent } from './admin-edit-fund/admin-edit-fund.compon
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  baseUrl="http://localhost:5005"
+  baseUrl="http://localhost:5007"
   login=new BehaviorSubject(false)
 
   constructor( private http:HttpClient) {
@@ -118,5 +118,76 @@ export class DataService {
     deleteFund(id:any){
       return this.http.delete(`${this.baseUrl}/admin/fund-delete/${id}`)
     }
+
+
+
+
+
+
+
+    //users
+
+    //get access of funds from the admin to - landing page
+    getAllFunds(){
+      return this.http.get(`${this.baseUrl}/landing/fund-access`)
+    }
+
+    //api for donate page when user click donate button to login if it does't login 
       
+    donateLogin(userId:any){
+      const body ={userId}
+      return this.http.post(`${this.baseUrl}/user/donatelogin`,body)
+    }
+
+       //get access of funds details from the user to route to  add to user page
+       getAllFundsUser(){
+        return this.http.get(`${this.baseUrl}/fund-access-user`)
+      }
+
+   // api to get single fund raiser details for user
+     getSingleFundDetailUser(id: any){
+      return this.http.get(`${this.baseUrl}/user-single-viewfund-detail/${id}`)
+    }
+
+    
+  //add funds- user
+  // donateFundUser(body:any){
+  //   return this.http.post(`${this.baseUrl}/user/donate-fund`,body)
+  // }
+
+  // //get receipt of donation
+  getReceiptFundUser(id:any){
+    return this.http.get(`${this.baseUrl}/user-receipt-detail/${id}`)
+  }
+     //api to get receipt
+  receiptuser(userId:any){
+    return this.http.get(`${this.baseUrl}/user/recipt/${userId}`)
+  } 
+  
+  // getAccountStatement(userId:any){
+  //   return this.http.get(`${this.baseUrl}/user/fund-statement/${userId}`)
+  // }
+
+  //post item donation
+  addAllDonation(body:any){
+    return this.http.post(`${this.baseUrl}/user/donate-all`,body)
+
+  }
+
+    //view all item donation - user
+    getItemDonation(userId:any){
+      return this.http.get(`${this.baseUrl}/user/itemDonationView/${userId}`)
+    }
+
+    //add funder user new
+    donateFundUser(body:any){
+      
+      return this.http.post(`${this.baseUrl}/user/donate-fund`,body)
+    }
+
+    //view receipt donation 
+    // viewrecepDonation(userId:any){
+    //   return this.http.get(`${this.baseUrl}/user/viewreceipt/${userId}`)
+    // }
+
 }

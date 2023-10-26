@@ -22,13 +22,23 @@ export class LoginComponent {
       next:(result:any)=>{
         alert(result.message)
         localStorage.setItem("user",result._id)
-        // console.log(result.message);
+        localStorage.setItem("emailid",result.email)
+        localStorage.setItem("username",result.uname)
+        localStorage.setItem("phone",result.ph)
+
+        
+
+        
+
+        console.log(result._id);
+        console.log(result.email);
+        
         this.route.navigateByUrl("user-home")
       },
       error:(result:any)=>{
         alert(result.error.message)
         // this.route.navigateByUrl("user-register")
-      }
+      } 
     })
   }
   signup(){

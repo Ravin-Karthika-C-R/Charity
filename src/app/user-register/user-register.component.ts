@@ -26,6 +26,15 @@ path:any=''
     .subscribe({
       next:(result:any)=>{
         alert(result.message)
+        console.log(result);
+        
+        localStorage.setItem("username",result.uname)
+        localStorage.setItem("phone",result.ph)
+
+        console.log(result.email);
+        console.log(result.ph);
+        
+        
         this.route.navigateByUrl('user-login')
       },
       error:(result:any)=>{

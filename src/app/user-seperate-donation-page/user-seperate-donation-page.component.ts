@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../service/data.service';
 import { Router } from '@angular/router';
+import { DataService } from '../service/data.service';
 
 @Component({
-  selector: 'app-user-home',
-  templateUrl: './user-home.component.html',
-  styleUrls: ['./user-home.component.css']
+  selector: 'app-user-seperate-donation-page',
+  templateUrl: './user-seperate-donation-page.component.html',
+  styleUrls: ['./user-seperate-donation-page.component.css']
 })
-export class UserHomeComponent implements OnInit{
+export class UserSeperateDonationPageComponent implements OnInit{
   funds:any=[]
-  uid:any=''
-
   constructor(private ds:DataService, private route:Router){}
+  
   ngOnInit(): void {
     this.userHomeFundView()
   }
+
   userHomeFundView(){
     this.ds.getAllFundsUser().subscribe({
       next:(result:any)=>{
@@ -22,5 +22,4 @@ export class UserHomeComponent implements OnInit{
       }
     })
   }
-
 }

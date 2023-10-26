@@ -9,6 +9,7 @@ import { DataService } from '../service/data.service';
 })
 export class AdminViewFundComponent {
   funds:any=[]
+  
 
   constructor(private ds:DataService, private route:Router){}
   ngOnInit(): void {
@@ -19,6 +20,11 @@ export class AdminViewFundComponent {
     this.ds.getFundAddedDetails().subscribe({
       next:(result:any)=>{
         this.funds=result.message
+        localStorage.setItem("fundTitle",result.title)
+        
+        console.log("fundtitle:",result.title);
+        
+
       }
     })
   }

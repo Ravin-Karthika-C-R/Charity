@@ -107,51 +107,19 @@
     </div>
   </section>
 
-  <section id="plan-container">
-    <div class="plan-item">
+  <div  id="plan-container">
+    <div *ngFor="let i of funduser" class="plan-item">
       <div class="plan-money">
         <!-- <i class="fa-solid fa-user"></i> -->
-        <img src="https://www.staples.com/sbd/cre/products/151206/51808/images/staples_banner960.jpg" alt="" style="width: 100%; height: 230px;
-        border-radius: 3px;">
-        
-        <h2 class="mt-5">Fundraising for the education of poor kids</h2>
-        
-        <p>our mission is to provide quality education to underprivileged children. We believe that education is the key to breaking the cycle of poverty and creating a brighter future.</p>
+        <img src="{{i.image}}" alt="" style="width: 100%; height: 230px; border-radius: 3px;">
+        <h2 class="mt-5">{{i.title}}</h2>
+        <p>{{i.description}}</p>
       </div>
-
-      <div class="plan-benifit mt-3">
-        
-        <a href="#">Donate</a>
+      <div class="plan-benifit mt-3">    
+        <a (click)="donate()">Donate</a>
       </div>
     </div>
-    <div class="plan-item">
-      <div class="plan-money">
-        <img src="https://images.pexels.com/photos/6995247/pexels-photo-6995247.jpeg?cs=srgb&dl=pexels-julia-m-cameron-6995247.jpg&fm=jpg" alt="" style="width: 100%; 
-        border-radius: 3px;">
-        <h2 class="mt-5">Fundraising Food for Kids and Old aged people</h2>
-        <p>You can donate money for food to kids and old aged people.
-          "It's not how much love we put into giving"...</p>
-      </div>
-<br>
-      <div class="plan-benifit">
-        
-        <a href="#">Donate</a>
-      </div>
-    </div>
-    <div class="plan-item">
-      <div class="plan-money">
-        <img src="https://media.istockphoto.com/id/475374733/photo/enjoying-their-retirement.jpg?s=612x612&w=0&k=20&c=bSVXp4uJlStBRbmTkeZE9kiv7egMpMNvKTHH3CJQljI=" alt="" style="width: 100%;
-        border-radius: 3px;">
-        <h2 class="mt-5">Bed for Strays</h2>
-        <p>Spread warmth among our stray friends by providing them with a comfy floor. We make pet beds to warm our abandoned fur buddies in shelters or on the streets. You can either purchase the beds to donate directly or contribute to help us provide free beds.</p>
-     
-      </div>
-
-      <div class="plan-benifit">
-        <a href="#">Donate</a>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <section class="awesome-feature" id="gallery">
     <div id="feature-text">
