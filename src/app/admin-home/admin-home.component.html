@@ -7,7 +7,7 @@
 <!-- Dashboard -->
 <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary " >
     <!-- Vertical Navbar -->
-    <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg" id="navbarVertical" style="background-color: black;">
+    <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-0 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg" id="navbarVertical" style="background-color: black;">
         <div class="container-fluid">
             <!-- Toggler --> 
             <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,9 +17,9 @@
             <a class="navbar-brand py-lg-2 mb-lg-5 px-lg-6 me-0 ms-3" routerLink="admin-home">
                 <!-- <img src="https://preview.webpixels.io/web/img/logos/clever-primary.svg" alt="..."> -->
             <!-- <img src="/assets/images/kovai-makkal.png" alt="img" height="620" width="100"> -->
-            <img class="mb-2 " src="https://st2.depositphotos.com/1364916/7242/v/450/depositphotos_72428813-stock-illustration-partners-friends-logo.jpg" height="620" width="60" alt=""><br>
+            <img class="mb-2 " src="https://st2.depositphotos.com/1364916/7242/v/450/depositphotos_72428813-stock-illustration-partners-friends-logo.jpg" height="890" width="60" alt=""><br>
 
-            <h4 class="text-primary">Mithra</h4>
+            <h4 class="text-danger">Mithra</h4>
 
             </a>
             <!-- User menu (mobile) -->
@@ -52,38 +52,89 @@
                             <i class="bi bi-house"></i> Home
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/admin-add-staffs">
-                            <i style='font-size:13px' class='fas'>&#xf234;</i> Add Staffs
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i style='font-size:13px' class='fas'>&#xf234;</i> Staffs
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/admin-view-staffs">
-                            <i class="fa fa-street-view" aria-hidden="true"></i> View Staffs
+                        <ul class="dropdown-menu ms-3">
+                          <li><a class="dropdown-item" routerLink="/admin-add-staffs">Add Staffs</a> </li>
+                          <li><a class="dropdown-item" routerLink="/admin-view-staffs"> View Staffs</a></li>
+                          <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-address-book-o" aria-hidden="true"></i> Members
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/admin-add-member">
-                            <i class="fa fa-address-book-o" aria-hidden="true"></i> Add Members
-                            <!-- <span class="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">6</span> -->
+                        <ul class="dropdown-menu ms-3">
+                          <li><a class="dropdown-item" routerLink="/admin-add-member"> Add Members</a></li>
+                          <li><a class="dropdown-item" routerLink="/admin-view-member"> View Members</a></li>
+                          <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-dove"></i> Fund Raiser
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/admin-view-member">
-                            <i class="fa fa-users" aria-hidden="true"></i> View Members
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/admin-view-donations">
+                        <ul class="dropdown-menu ms-3">
+                          <li><a class="dropdown-item" routerLink="/admin-add-fund"> Add Fund Raiser Details</a></li>
+                          <li><a class="dropdown-item" routerLink="/admin-view-fund"> View Fund Raiser Details</a></li>
+                          <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-hand-holding-heart"></i> Donations
                         </a>
-                    </li>
-                    <li class="nav-item">
+                        <ul class="dropdown-menu ms-3">
+                          <li><a class="dropdown-item" routerLink="/admin-view-donations">Items</a></li>
+                          <li><a class="dropdown-item" routerLink="/admin-user-fund-details">Funds</a></li>
+                          <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                      </li>
+                      <li class="nav-item">
                         <a class="nav-link" routerLink="/admin-view-user">
                             <i class="bi bi-people"></i> Users
                         </a>
                     </li>
-                    <li class="nav-item">
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin-add-staffs">
+                            <i style='font-size:13px' class='fas'>&#xf234;</i> Add Staffs
+                        </a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin-view-staffs">
+                            <i class="fa fa-street-view" aria-hidden="true"></i> View Staffs
+                        </a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin-add-member">
+                            <i class="fa fa-address-book-o" aria-hidden="true"></i> Add Members
+                        </a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin-view-member">
+                            <i class="fa fa-users" aria-hidden="true"></i> View Members
+                        </a>
+                    </li> -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-hand-holding-heart"></i> Donations
+                        </a>
+                        <ul class="dropdown-menu ms-3">
+                          <li><a class="dropdown-item" routerLink="/admin-view-donations">Items</a></li>
+                          <li><a class="dropdown-item" routerLink="/user-view-fund-details">Funds</a></li>
+                          
+                        </ul>
+                      </li> -->
+                    
+                    
+                    <!-- <li class="nav-item">
                         <a class="nav-link" routerLink="/admin-add-fund">
                             <i class="fa-solid fa-dove"></i>Add Fund Raiser
                         </a>
@@ -93,7 +144,7 @@
                             <i class="fa-solid fa-piggy-bank"></i>View Fund Raiser
                         </a>
                     </li>
-                    
+                     -->
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="bi bi-person-square"></i> Account

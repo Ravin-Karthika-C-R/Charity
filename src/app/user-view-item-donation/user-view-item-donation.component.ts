@@ -11,6 +11,7 @@ import { DatePipe } from '@angular/common';
 export class UserViewItemDonationComponent {
   items:any=[] 
   userId:any=""
+  unname:any=""
   constructor(private ds:DataService,private route:Router,private datePipe: DatePipe){}
   ngOnInit(): void {
     this.getitems()
@@ -19,6 +20,7 @@ export class UserViewItemDonationComponent {
 
     if(localStorage.getItem("user")){
       this.userId= localStorage.getItem("user")
+      this.unname=localStorage.getItem("username")
       this.ds.getItemDonation(this.userId).subscribe({
        next:(data:any)=>{
          this.items=data.message
