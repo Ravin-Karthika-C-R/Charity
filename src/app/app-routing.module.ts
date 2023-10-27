@@ -22,6 +22,7 @@ import { UserSeperateDonationPageComponent } from './user-seperate-donation-page
 import { UserViewFundComponent } from './user-view-fund/user-view-fund.component';
 import { UserFormDonationComponent } from './user-form-donation/user-form-donation.component';
 import { UserViewItemDonationComponent } from './user-view-item-donation/user-view-item-donation.component';
+import { AdminViewUserfunddetailsComponent } from './admin-view-userfunddetails/admin-view-userfunddetails.component';
 
 
 
@@ -44,6 +45,7 @@ const routes: Routes = [
   {path:"admin-add-fund",component:AdminAddFundComponent},
   {path:"admin-view-fund",component:AdminViewFundComponent},
   {path:"admin-edit-fund/:id",component:AdminEditFundComponent},
+  {path:"admin-user-fund-details",component:AdminViewUserfunddetailsComponent},
 
   //users
   {path:"user-donate-page/:id",component:UserDonatePageComponent},

@@ -19,6 +19,8 @@ export class UserSeperateDonationPageComponent implements OnInit{
     this.ds.getAllFundsUser().subscribe({
       next:(result:any)=>{
         this.funds=result.message
+        console.log(this.funds);
+        
       }
     })
   }

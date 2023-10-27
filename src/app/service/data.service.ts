@@ -190,4 +190,15 @@ export class DataService {
     //   return this.http.get(`${this.baseUrl}/user/viewreceipt/${userId}`)
     // }
 
+    //view item donation details of user for admin
+
+    getAllItemDonationAdmin(){
+      return this.http.get(`${this.baseUrl}/admin/itemDonationDetails`)
+    }
+
+    //view fund donation details of user for admin
+    getAdminAllUserFundDonation(){
+      return this.http.get(`${this.baseUrl}/admin/userfundDonationDetails`)
+    }
+
 }

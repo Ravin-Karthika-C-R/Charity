@@ -20,7 +20,7 @@ export class AdminViewFundComponent {
     this.ds.getFundAddedDetails().subscribe({
       next:(result:any)=>{
         this.funds=result.message
-        localStorage.setItem("fundTitle",result.title)
+        // localStorage.setItem("fundTitle",result.title)
         
         console.log("fundtitle:",result.title);
         

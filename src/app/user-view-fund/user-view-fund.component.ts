@@ -57,6 +57,8 @@ export class UserViewFundComponent implements OnInit {
       next:(result:any)=>{
         this.pdata=result.message
         console.log(this.pdata);
+        console.log(this.fundtitle);
+        
         console.log(this.userId);
         
         
