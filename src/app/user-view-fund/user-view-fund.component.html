@@ -1,12 +1,3 @@
-<!--
-
-Follow me on
-Dribbble: https://dribbble.com/supahfunk
-Twitter: https://twitter.com/supahfunk
-Codepen: https://codepen.io/supah/
-
--->
-
 <app-user-header></app-user-header>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title> Order confirmation </title>
@@ -45,6 +36,7 @@ Codepen: https://codepen.io/supah/
 
 <body>
   
+ <div class="p-3 ms-4" id="invoice_container">
 
 <!-- Header -->
 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
@@ -70,7 +62,7 @@ Codepen: https://codepen.io/supah/
                     <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="col">
                       <tbody>
                         <tr>
-                          <td align="left"> <img src="https://st2.depositphotos.com/1364916/7242/v/450/depositphotos_72428813-stock-illustration-partners-friends-logo.jpg" height="70" width="60" alt="logo" border="0" /></td>
+                          <td align="left"> <img src="/assets/logo.jpg" height="70" width="60" alt="logo" border="0" /></td>
                         </tr>
                         <tr class="hiddenMobile">
                           <td height="40"></td>
@@ -80,7 +72,7 @@ Codepen: https://codepen.io/supah/
                         </tr>
                         <tr>
                           <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;">
-                            Hello,{{uname}}.
+                            Hello, {{uname}}.
                             <br> Thank you for the donation.
                           </td>
                         </tr>
@@ -109,7 +101,7 @@ Codepen: https://codepen.io/supah/
                         <tr>
                           <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: right;">
                             
-                            <small>{{date | date : 'short'}}</small>
+                            <small>{{dates | date: 'd/M/yy, h:mm a' }}</small>
                           </td>
                         </tr>
                       </tbody>
@@ -144,14 +136,14 @@ Codepen: https://codepen.io/supah/
                 <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
                   <tbody>
                     <tr>
-                      <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
+                      <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
                         Category
                       </th>
-                      <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
+                      <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
                         Payment Method
                       </th>
                       
-                      <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="left">
+                      <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="left">
                         Amount
                       </th>
                     </tr>
@@ -162,13 +154,13 @@ Codepen: https://codepen.io/supah/
                       <td height="10" colspan="4"></td>
                     </tr>
                     <tr>
-                      <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000;  line-height: 18px;  vertical-align: top; padding:10px 0;" class="article">
+                      <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #000000;  line-height: 18px;  vertical-align: top; padding:10px 0;" class="article">
                         {{fundtitle}}
                       </td>
-                      <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000;  line-height: 18px;  vertical-align: top; padding:10px 0;" class="article">
-                        Online
+                      <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #000000;  line-height: 18px;  vertical-align: top; padding:10px 0;" class="article">
+                       &nbsp;&nbsp;&nbsp;&nbsp; Online
                       </td>
-                      <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e;  line-height: 18px;  vertical-align: top; padding:10px 0;" align="left">{{pdata.amount}}</td>
+                      <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #000000;  line-height: 18px;  vertical-align: top; padding:10px 0;" align="left">{{pdata.amount}}</td>
                     </tr>
                     <tr>
                       <td height="1" colspan="4" style="border-bottom:1px solid #e4e4e4"></td>
@@ -287,17 +279,20 @@ Codepen: https://codepen.io/supah/
     <td height="20"></td>
   </tr>
 </table>
-<!-- <div class="p-3 " style="text-align: center; margin-left: 400px;">
+</div> 
+<div class="p-3 text-center"  style="text-align: center; ">
   <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
     <tbody>
       <tr>
-        <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;">
-          <button class="btn text-center .btn-lg" style="border-color: #681104; color: #ffffff; background-color: #0b0b0ba9" (click)="pdfExport()" > Print </button>
+        <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; ">
+          <button class="btn text-center .btn-lg" style="border-color: #681104; color: #000000; background-color: #ffffffa9" (click)="pdfExport()" > <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+            <style>svg{fill:#fb5050}</style><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H176c-35.3 0-64 28.7-64 64V512H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"/></svg>
+             Download </button>
         </td>
       </tr>
     </tbody>
   </table>
-</div> -->
+</div>
 </body>
 
 

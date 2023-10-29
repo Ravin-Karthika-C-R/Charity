@@ -14,6 +14,12 @@
             <label for="" class="mt-2"><strong >Description</strong></label>
             <textarea [(ngModel)]="pdata.description"name="desp" id="d1" cols="30" rows="10" placeholder="type here.." class="form-control mt-3"></textarea>
 
+            <label for="" class="mt-2"><strong >Start Date</strong></label>
+            <input [(ngModel)]="pdata.startdate" type="datetime-local" name="start" id="d2"  placeholder="type here.." class="form-control mt-3">
+
+            <label for="" class="mt-2"><strong >End Date</strong></label>
+            <input [(ngModel)]="pdata.enddate" type="datetime-local" name="end" id="d3"  placeholder="type here.." class="form-control mt-3">
+
             <button (click)="editFund()" class="btn btn-dark mt-5">Update</button>
         </form>
         </div>

@@ -21,6 +21,7 @@ export class AdminLoginComponent {
         console.log(result.message); 
         alert(result.message)
         this.route.navigateByUrl('admin-home')
+        
 
       },
       error: (result: any) => {

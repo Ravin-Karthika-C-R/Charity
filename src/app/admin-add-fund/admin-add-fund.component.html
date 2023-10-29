@@ -6,14 +6,34 @@
             
             <label for="" class="mt-3">Title</label>
             <input formControlName="title" type="text" placeholder="title" name="address" id="a3" class="form-control mt-3">
+            <div *ngIf="this.addFundForm.get('title')?.errors && this.addFundForm.get('title')?.touched">
+                <p class="text-danger">Accept only characters</p>
+            </div>
 
             <label for="" class="mt-3">Image</label>
-            <input formControlName="image"  type="text" placeholder="image link" name="image" id="a2" class="form-control mt-3">
+            <input formControlName="image"  type="text" placeholder="image link" name="image" id="a2" class="form-control mt-3" required>
+            <div *ngIf="this.addFundForm.get('image')?.errors && this.addFundForm.get('image')?.touched">
+                <p class="text-danger">Check the link</p>
+            </div>
             
             <label for="" class="mt-3">Description</label>
             <textarea formControlName="description" type="text" placeholder="description of fund raising" name="cn" id="a4" class="form-control mt-3" cols="30" rows="10"></textarea>
+            <div *ngIf="this.addFundForm.get('description')?.errors && this.addFundForm.get('description')?.touched">
+                <p class="text-danger">Accept only characters</p>
+            </div>
             
-            
+            <label for="" class="mt-3">Start Date</label>
+            <input formControlName="startdate"  type="datetime-local" placeholder="start" name="image" id="a2" class="form-control mt-3" required>
+            <div *ngIf="this.addFundForm.get('startdate')?.errors && this.addFundForm.get('startdate')?.touched">
+                <p class="text-danger">Enter the date time</p>
+            </div>
+
+            <label for="" class="mt-3">End Date</label>
+            <input formControlName="enddate"  type="datetime-local" placeholder="end" name="image" id="a2" class="form-control mt-3" required>
+            <div *ngIf="this.addFundForm.get('enddate')?.errors && this.addFundForm.get('enddate')?.touched">
+                <p class="text-danger">Enter the date time</p>
+            </div>
+
             <button (click)="addfund()" class="btn btn-dark mt-5 text-center">add</button>
         </form>
         </div>

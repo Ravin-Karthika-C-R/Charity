@@ -13,6 +13,8 @@ export class UserFormDonationComponent {
   constructor(private ds:DataService, private route:Router, private fb:FormBuilder){}
 userId:any=""
 uname:any=""
+ph:any=""
+email:any=""
   addDonationForm=this.fb.group({
     
     itemname:[''],
@@ -29,6 +31,9 @@ uname:any=""
     const path=this.addDonationForm.value
     this.userId=localStorage.getItem("user")
     this.uname=localStorage.getItem("username")
+    this.ph=localStorage.getItem("phone")
+    this.email=localStorage.getItem("emailid")
+
     let dData={
       userId : this.userId,
       uname:this.uname,
@@ -38,6 +43,8 @@ uname:any=""
       address:path.address,
       city:path.city,
       pincode:path.pincode,
+      ph:this.ph,
+      email:this.email,
       datetime:path.datetime,
 
     }

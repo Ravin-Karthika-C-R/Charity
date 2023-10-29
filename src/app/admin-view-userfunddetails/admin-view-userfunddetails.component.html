@@ -28,29 +28,26 @@
           <th></th>
           <th>No</th>
           <th>DONAR NAME</th>
-          <th>ITEM NAME</th>
-          <th>ITEM DETAIL</th>
-          <th>QUANTITY</th>
-          <th>ADDRESS</th>
-          <th>CITY</th>
-          <th>PINCODE</th>
-          <th>EMAIL</th>
+          <th>CATEGORY</th>
+          <th>AMOUNT</th>
           <th>PHONE NUMBER</th>
+          <th>EMAIL</th>
           <th>DATE-TIME</th>
 
         </tr>
       </thead>
       <tbody>
-        <tr >
+        <tr *ngFor="let i of items, let j=index ">
           <td>
             <input type="checkbox"/>
           </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>This is Item number 3-1</td>
-          <td>This is Item number 4-1</td>
-          <td>This is Item number 5-1</td>
+          <td>{{j+1}}</td>
+          <td>{{i.uname}}</td>
+          <td>{{i.title}}</td>
+          <td>{{i.amount}}</td>
+          <td>{{i.ph}}</td>
+          <td>{{i.email}}</td>
+          <td>{{i.dt | date: 'd/M/yy, h:mm a'}}</td>
         </tr>
         
       </tbody>

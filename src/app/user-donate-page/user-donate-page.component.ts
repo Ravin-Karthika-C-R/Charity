@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-user-donate-page',
@@ -29,8 +30,9 @@ export class UserDonatePageComponent implements OnInit{
   title:any=""
   ph:any=""
   email:any=""
+  dt:any=""
 
-  constructor(private ds:DataService,private ar:ActivatedRoute, private fb:FormBuilder,private route:Router){}
+  constructor(private ds:DataService,private ar:ActivatedRoute, private fb:FormBuilder,private route:Router,private dp:DatePipe){}
   
   
   ngOnInit(): void {
@@ -41,15 +43,19 @@ export class UserDonatePageComponent implements OnInit{
           this.pdata=result.message
           this.fId=localStorage.setItem("fundId",this.pdata._id)
           this.title=localStorage.setItem("titlename",this.pdata.title)
+          this.title=localStorage.getItem("titlename")
 
           console.log("fund data",this.pdata)
           console.log("fundId",this.pdata._id);
+          console.log(this.title);
+          
           
           
         }
       })
     })
     // this.addfunduser()
+
   }
   
   addfunduser(){
@@ -61,14 +67,17 @@ export class UserDonatePageComponent implements OnInit{
     // this.email=localStorage.setItem("email",this.email)
 
     this.uname=localStorage.getItem("username")
-    this.title=localStorage.getItem("title")
+    this.title=localStorage.getItem("titlename")
     this.ph=localStorage.getItem("phone")
     this.email=localStorage.getItem("emailid")
     
     console.log(this.uname);
     
+    //date
+    this.dt=new Date()
+    console.log(this.dt);
 
-    // this
+    // this.dt=this.dp.transform(date,'medium')
 
     const path=this.addFundUserForm.value
     let fundData={
@@ -78,14 +87,13 @@ export class UserDonatePageComponent implements OnInit{
       title:this.title,
       ph:this.ph,
       email:this.email,
-      fname:path.fname,
-      phone:path.phone,
       amount:path.amount,
       cardno:path.cardno,
       expdate:path.expdate,
-      cvv:path.cvv
+      cvv:path.cvv,
+      dt:this.dt
     }
-
+    
 
     if(this.addFundUserForm.valid){
       this.ds.donateFundUser(fundData).subscribe({

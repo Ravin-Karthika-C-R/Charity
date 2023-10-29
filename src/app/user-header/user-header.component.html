@@ -62,7 +62,7 @@
 
 <nav class="navbar navbar-expand-lg p-2">
   <div class="container-fluid">
-    <a class="navbar-brand text-danger" routerLink="/admin-home"> Mithra  
+    <a class="navbar-brand text-danger" routerLink="/user-home"> Mithra  
        <img src="https://st2.depositphotos.com/1364916/7242/v/450/depositphotos_72428813-stock-illustration-partners-friends-logo.jpg" height="70" width="60" alt="">
     </a>
     <button class="navbar-toggler toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,36 +75,42 @@
         </li>
      
         <li class="nav-item ms-3">
-          <a class="nav-link" aria-current="page" href="#about" >About</a>
+          <a class="nav-link" aria-current="page" href="user-home/#about1">About</a>
         </li>
         <li class="nav-item ms-3">
-          <a class="nav-link " aria-current="page" routerLink="/user-header-view-fund">Fund Raiser</a>
+          <!-- <a class="nav-link " aria-current="page" routerLink="/user-header-view-fund">Fund Raiser</a> -->
+          <a class="nav-link " aria-current="page" href="user-home/#fund1">Fund Raiser</a>
+
         </li>
         <li class="nav-item ms-3">
           <a class="nav-link " aria-current="page" routerLink="/user-donation-form" >Donate</a>
         </li>
+
+        <li class="nav-item ms-3">
+          <a class="nav-link " aria-current="page" routerLink="/user-view-item-donation">My contributions</a>
+        </li>
         
-        <li class="nav-item dropdown ms-3">
+        <!-- <li class="nav-item dropdown ms-3">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             My Contributions
           </a>
           <ul class="dropdown-menu ms-3">
             <li><a class="dropdown-item" routerLink="/user-view-item-donation">Donations</a></li>
             <li><a class="dropdown-item" routerLink="/user-view-fund-details">Fund Details</a></li>
-            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            
           </ul>
-        </li>
+        </li> -->
+
+        <!-- <li class="nav-item ms-3">
+          <a class="nav-link" aria-current="page" href="user-home/#gallery1" >Gallery</a>
+        </li> -->
 
         <li class="nav-item ms-3">
-          <a class="nav-link" aria-current="page" href="#gallery" >Gallery</a>
-        </li>
-
-        <li class="nav-item ms-3">
-          <a class="nav-link" aria-current="page" href="#contact" >Contact Us</a>
+          <a class="nav-link" aria-current="page" href="user-home/#contact1" >Contact Us</a>
         </li>
        
          <li class="nav-item ms-3">
-          <a class="nav-link" routerLink="">
+          <a (click)="logout()" class="nav-link" routerLink="">
             <i class="fa-solid fa-right-from-bracket"></i> Logout
           </a>
       </li>

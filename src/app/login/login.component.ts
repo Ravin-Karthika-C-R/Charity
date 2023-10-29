@@ -26,7 +26,8 @@ export class LoginComponent {
         localStorage.setItem("username",result.uname)
         localStorage.setItem("phone",result.ph)
 
-        
+        localStorage.removeItem("iconify-count")
+        localStorage.removeItem("iconify-version")
 
         
 

@@ -7,18 +7,21 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit{
-  login:any=""
-  constructor(private ds:DataService, private route:Router){}
+export class HeaderComponent {
+  // login:any=""
+  // constructor(private ds:DataService, private route:Router){}
 
-  ngOnInit(): void {
-    this.ds.login.subscribe((logData:any)=>{
-      this.login=logData
-    })
-  }
+  constructor(private rout:Router){}
+  
+  //logout
   logout(){
     localStorage.removeItem("user")
-    this.ds.login.next(false)
-    this.route.navigateByUrl("")
-  }
+    localStorage.removeItem("username")
+    localStorage.removeItem("titlename")
+    localStorage.removeItem("phone")
+    localStorage.removeItem("emailid")
+    localStorage.removeItem("fundId")
+
+    this.rout.navigateByUrl("")
+}
 }

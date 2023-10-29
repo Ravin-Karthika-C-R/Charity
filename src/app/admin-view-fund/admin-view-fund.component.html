@@ -11,13 +11,17 @@
           <th>Title</th>
           <th>Photo</th>
           <th>Description</th>
+          <th>Start Date</th>
+          <th>End Date</th>
           <th>Action</th>
         </tr>
         <tr *ngFor="let i of funds , let j=index">
           <td data-th="#">{{j+1}}</td>
-          <td data-th="Name">{{i.title}}</td>
-          <td data-th="Password"><img src={{i.image}} alt="" height="100px"></td>
-          <td data-th="Password">{{i.description}}</td>
+          <td data-th="Category">{{i.title}}</td>
+          <td data-th="Image"><img src={{i.image}} alt="" height="100px"></td>
+          <td data-th="Description">{{i.description}}</td>
+          <td data-th="Start Date">{{i.startdate | date: 'd/M/yy, h:mm a'}}</td>
+          <td data-th="End Date">{{i.enddate | date: 'd/M/yy, h:mm a'}}</td>
           <td>
             <button (click)="editFundPage(i._id)" class="btn btn-info mt-2 w-100"> <i class="fas fa-edit"></i>Edit </button>
             <button (click)="deleteFundDetails(i._id)"  class="btn btn-danger mt-2 w-100"><i class="fa-solid fa-trash fa-xs"></i>Delete</button>

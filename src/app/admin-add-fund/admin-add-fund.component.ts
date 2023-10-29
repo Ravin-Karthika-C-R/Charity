@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../service/data.service';
 
@@ -13,8 +13,10 @@ export class AdminAddFundComponent {
 
   addFundForm=this.fb.group({
     image:[''],
-    title:[''],
-    description:['']
+    title:['',[Validators.required, Validators.pattern('[a-zA-Z ]+')]],
+    description:['',[Validators.required, Validators.pattern('[a-zA-Z0-9 .]+')]],
+    startdate:[''],
+    enddate:['']
 
   })
   addfund(){
@@ -23,6 +25,9 @@ export class AdminAddFundComponent {
       image:path.image,
       title:path.title,
       description:path.description,
+      startdate:path.startdate,
+      enddate:path.enddate
+
       
     }
     if(this.addFundForm.valid){
@@ -34,6 +39,9 @@ export class AdminAddFundComponent {
       })
       this.addFundForm.reset()
 
+    }
+    else{
+      alert('Please fill all the fields');
     }
   }
 
