@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../service/data.service';
 import { Router } from '@angular/router';
 
@@ -10,19 +10,28 @@ import { Router } from '@angular/router';
 })
 export class UserRegisterComponent {
 path:any=''
+pswCheck: any = false
+
   userRegForm=this.fb.group({
-    uname:[''],
-    email:[''],
-    ph:[''],
-    psw:[''],
-    cpsw:['']
+    uname:['',[Validators.required, Validators.pattern('[a-zA-Z ]+')]],
+    email:['',[Validators.required, Validators.pattern('[a-zA-Z@. ]+')]],
+    ph:['', [Validators.required, Validators.pattern('[0-9]+')]],
+    psw:['', [Validators.required, Validators.pattern('[0-9a-zA-Z]+')]],
+    cpsw:['', [Validators.required, Validators.pattern('[0-9a-zA-Z]+')]]
     
   })
   constructor(private fb:FormBuilder, private ds:DataService, private route:Router){
 
   }
   register(){
-    this.ds.userRegister(this.userRegForm.value.uname,this.userRegForm.value.email,this.userRegForm.value.ph,this.userRegForm.value.psw)
+    var path = this.userRegForm.value
+
+    
+    if (this.userRegForm.valid) {
+      if (this.userRegForm.value.psw == this.userRegForm.value.cpsw) {
+        this.pswCheck = false
+        //api call
+        this.ds.userRegister(this.userRegForm.value.uname,this.userRegForm.value.email,this.userRegForm.value.ph,this.userRegForm.value.psw)
     .subscribe({
       next:(result:any)=>{
         alert(result.message)
@@ -42,6 +51,17 @@ path:any=''
         
       }
     })
+
+      }
+      else {
+        this.pswCheck = true
+      }
+
+    }
+    else {
+      alert('invalid')
+    }
+
 
   }
 

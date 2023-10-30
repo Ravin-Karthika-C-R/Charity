@@ -201,6 +201,12 @@ export class DataService {
       return this.http.get(`${this.baseUrl}/admin/userfundDonationDetails`)
     }
 
+    //view user profile
+    // getProfile(userId:any){
+    //   return this.http.get(`${this.baseUrl}/user/profile/${userId}`)
+      
+    // }
+
     
 
 }

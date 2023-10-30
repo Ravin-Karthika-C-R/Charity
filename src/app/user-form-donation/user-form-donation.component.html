@@ -9,18 +9,30 @@
             <label for="" class="mt-3">Item Name</label>
             <input formControlName="itemname"  type="text" placeholder="food/clothes..." name="image" id="a2" class="form-control mt-3">
 
+            <div *ngIf="this.addDonationForm.get('itemname')?.errors && this.addDonationForm.get('itemname')?.touched">
+                <p class="text-danger">Accept only characters </p>
+            </div>
 
             <label for="" class="mt-3">Item Detail</label>
             <textarea formControlName="detail"  type="text" placeholder="detail" name="imageddd" id="a2dd" class="form-control mt-3" cols="30" rows="10"></textarea>
-           
+            <div *ngIf="this.addDonationForm.get('detail')?.errors && this.addDonationForm.get('detail')?.touched">
+                <p class="text-danger">Accept characters, numbers </p>
+            </div>
             
             <label for="" class="mt-3">Quantity</label>
             <input formControlName="quantity" type="text" placeholder="number" name="cn" id="a4" class="form-control mt-3">
             
+            <div *ngIf="this.addDonationForm.get('quantity')?.errors && this.addDonationForm.get('quantity')?.touched">
+                <p class="text-danger">Accept only numbers </p>
+            </div>
+
             <label for="" class="mt-3">Pick Up Address</label>
             <!-- <input formControlName="address" type="text" placeholder="" name="address" id="a3" class="form-control mt-3"> -->
             <textarea formControlName="address" name="addresses" placeholder="Address" id="a3" cols="30" rows="10" class="form-control mt-3"></textarea>
-
+            
+            <div *ngIf="this.addDonationForm.get('address')?.errors && this.addDonationForm.get('address')?.touched">
+                <p class="text-danger">Accept characters, numbers </p>
+            </div>
             
             <!-- <label for="" class="mt-3">Address Proof(Manditory)</label>
             <input formControlName="adproof" type="text" placeholder="image" name="ap" id="a5" class="form-control mt-3"> -->
@@ -28,12 +40,24 @@
             <label for="" class="mt-3">City</label>
             <input formControlName="city" type="text" placeholder="city name" name="ip" id="a6" class="form-control mt-3">
             
+            <div *ngIf="this.addDonationForm.get('city')?.errors && this.addDonationForm.get('city')?.touched">
+                <p class="text-danger">Accept characters </p>
+            </div>
+
             <label for="" class="mt-3">Pincode</label>
             <input formControlName="pincode"  type="text" placeholder="6 digit number" name="ddd" id="a8" class="form-control mt-3">
             
+            <div *ngIf="this.addDonationForm.get('pincode')?.errors && this.addDonationForm.get('pincode')?.touched">
+                <p class="text-danger">Accept numbers only </p>
+            </div>
+
             <label for="" class="mt-3">Pick Up Date Time</label>
-            <input formControlName="datetime"  type="datetime-local" placeholder="description" name="des" id="a7" class="form-control mt-3">
+            <input formControlName="datetime"  type="datetime-local" placeholder="description" name="des" id="a7" class="form-control mt-3" required>
             
+            <!-- <div *ngIf="this.addDonationForm.get('datetime')?.errors && this.addDonationForm.get('datetime')?.touched">
+                <p class="text-danger">Can't be blank </p>
+            </div> -->
+
             <button (click)="adddonation()" class="btn btn-dark mt-5 text-center">Submit</button>
         </form>
         </div>

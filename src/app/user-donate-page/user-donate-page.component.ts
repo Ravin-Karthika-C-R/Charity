@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 
 @Component({
@@ -12,12 +12,12 @@ import { DatePipe } from '@angular/common';
 export class UserDonatePageComponent implements OnInit{
 
   addFundUserForm=this.fb.group({
-    fname:[''],
-    phone:[''],
-    amount:[''],
-    cardno:[''],
-    expdate:[''],
-    cvv:['']
+    
+    phone:['', [Validators.required, Validators.pattern('[0-9]+')]],
+    amount:['',[Validators.required, Validators.pattern('[0-9]+')]],
+    cardno:['',[Validators.required, Validators.pattern('[0-9]+')]],
+    expdate:['',[Validators.required, Validators.pattern('[0-9/]+')]],
+    cvv:['',[Validators.required, Validators.pattern('[0-9]+')]]
 
   })
   userId  :any=""
@@ -54,6 +54,8 @@ export class UserDonatePageComponent implements OnInit{
         }
       })
     })
+    
+    
     // this.addfunduser()
 
   }
@@ -61,11 +63,6 @@ export class UserDonatePageComponent implements OnInit{
   addfunduser(){
     this.userId=localStorage.getItem("user")
     this.fId=localStorage.getItem("fundId")
-    
-    // this.title=localStorage.setItem("title",this.title)
-    // this.ph=localStorage.setItem("ph",this.ph)
-    // this.email=localStorage.setItem("email",this.email)
-
     this.uname=localStorage.getItem("username")
     this.title=localStorage.getItem("titlename")
     this.ph=localStorage.getItem("phone")
@@ -77,10 +74,11 @@ export class UserDonatePageComponent implements OnInit{
     this.dt=new Date()
     console.log(this.dt);
 
+
     // this.dt=this.dp.transform(date,'medium')
 
-    const path=this.addFundUserForm.value
-    let fundData={
+    var path=this.addFundUserForm.value
+    var fundData={
       fId:this.fId,
       userId:this.userId,
       uname:this.uname,
@@ -93,13 +91,15 @@ export class UserDonatePageComponent implements OnInit{
       cvv:path.cvv,
       dt:this.dt
     }
+
     
 
-    if(this.addFundUserForm.valid){
+    
       this.ds.donateFundUser(fundData).subscribe({
         next:(result:any)=>{
           // alert(result)
-          console.log(result);
+          
+          console.log("result",result);
           
           alert("Money transferred successfully")
           this.route.navigateByUrl("user-receipt")
@@ -107,7 +107,8 @@ export class UserDonatePageComponent implements OnInit{
         }
       })
 
-    }
+    
+    
   }
   
 

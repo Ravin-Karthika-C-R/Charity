@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../service/data.service';
 
@@ -17,12 +17,12 @@ ph:any=""
 email:any=""
   addDonationForm=this.fb.group({
     
-    itemname:[''],
-    detail:[''],
-    quantity:[''],
-    address:[''],
-    city:[''],
-    pincode:[''],
+    itemname:['',[Validators.required, Validators.pattern('[a-zA-Z ]+')]],
+    detail:['',[Validators.required, Validators.pattern('[a-zA-Z.0-9 ]+')]],
+    quantity:['',[Validators.required, Validators.pattern('[0-9 ]+')]],
+    address:['',[Validators.required, Validators.pattern('[a-zA-Z.0-9 ]+')]],
+    city:['',[Validators.required, Validators.pattern('[a-zA-Z ]+')]],
+    pincode:['',[Validators.required, Validators.pattern('[0-9]+')]],
     datetime:['']
 
   })

@@ -33,6 +33,8 @@ import { FilterPipe } from './charityPipes/filter.pipe';
 import { UserViewFundComponent } from './user-view-fund/user-view-fund.component';
 import { UserViewItemDonationComponent } from './user-view-item-donation/user-view-item-donation.component';
 import { DatePipe } from '@angular/common';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserEditProfileComponent } from './user-edit-profile/user-edit-profile.component';
 
 
 
@@ -65,7 +67,9 @@ import { DatePipe } from '@angular/common';
     UserSeperateDonationPageComponent,
     UserFormDonationComponent,
     FilterPipe,
-    UserViewItemDonationComponent
+    UserViewItemDonationComponent,
+    UserProfileComponent,
+    UserEditProfileComponent
     
   ],
   imports: [

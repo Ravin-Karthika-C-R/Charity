@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../service/data.service';
 
@@ -11,8 +11,8 @@ import { DataService } from '../service/data.service';
 export class LoginComponent {
  
   userForm = this.fb.group({
-    email: [''],
-    psw: ['']
+    email: ['',[Validators.required, Validators.pattern('[0-9a-zA-Z@. ]+')]],
+    psw: ['',[Validators.required, Validators.pattern('[0-9a-zA-Z]+')]]
   })
   constructor(private ds:DataService, private route:Router, private fb:FormBuilder){}
 

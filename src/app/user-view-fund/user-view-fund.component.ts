@@ -26,6 +26,7 @@ export class UserViewFundComponent implements OnInit {
   id:any=""
   dates:any=""
   amounts:any=""
+  last:any=""
 
   
   constructor(private ar: ActivatedRoute, private ds: DataService, private route: Router) { }
@@ -38,29 +39,25 @@ export class UserViewFundComponent implements OnInit {
         this.userId=localStorage.getItem("user")
         this.dates=localStorage.getItem("dateTime")
     }
-    setTimeout(() => {
-      this.spinner = false;
-    }, 2000);
-    
-    
-    // this.getfund()
     this.getFunds();
-    console.log("donateid",this.userId);
-    console.log(this.pdata);
+
     
     this.dates = new Date();
-    //amount
-
+  
     console.log(this.dates);
     
   }
 
   getFunds(){
 
- 
     this.ds.receiptuser(this.userId).subscribe({
       next:(result:any)=>{
         this.pdata=result.message
+        this.last=this.pdata.at(this.pdata.length-1)
+      
+        console.log("l",this.last); 
+        
+        
         console.log("result",this.pdata);
         
         const receivedDate = this.pdata?.dt; // Use the safe navigation operator
