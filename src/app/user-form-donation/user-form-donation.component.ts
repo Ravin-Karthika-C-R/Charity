@@ -63,5 +63,8 @@ email:any=""
       this.addDonationForm.reset()
 
     }
+    else{
+      alert("Invalid")
+    }
   }
 }

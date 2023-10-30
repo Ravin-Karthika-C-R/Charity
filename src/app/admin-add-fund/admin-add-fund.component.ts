@@ -12,7 +12,7 @@ export class AdminAddFundComponent {
   constructor(private ds:DataService, private route:Router, private fb:FormBuilder){}
 
   addFundForm=this.fb.group({
-    image:[''],
+    image:['',[Validators.required, Validators.pattern(/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|bmp|svg|webp))/)]],
     title:['',[Validators.required, Validators.pattern('[a-zA-Z ]+')]],
     description:['',[Validators.required, Validators.pattern('[a-zA-Z0-9 .]+')]],
     startdate:[''],

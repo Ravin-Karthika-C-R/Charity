@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
 import { Router } from '@angular/router';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-add-member',
@@ -12,13 +12,13 @@ export class AdminAddMemberComponent implements OnInit{
   constructor(private ds:DataService, private route:Router, private fb:FormBuilder){}
 
   addMemberForm=this.fb.group({
-    mname:[''],
-    mimage:[''],
-    address:[''],
-    phn:[''],
+    mname:['',[Validators.required, Validators.pattern('[a-zA-Z ]+')]],
+    mimage:['',[Validators.required, Validators.pattern(/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|bmp|svg|webp))/)]],
+    address:['',[Validators.required, Validators.pattern('[a-zA-Z0-9. ]+')]],
+    phn:['',[Validators.required, Validators.pattern('[0-9 ]+')]],
     adproof:[''],
-    idproof:[''],
-    description:['']
+    idproof:['',[Validators.required, Validators.pattern(/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|bmp|svg|webp))/)]],
+    description:['',[Validators.required, Validators.pattern('[a-zA-Z0-9. ]+')]]
 
   })
   ngOnInit(): void {
@@ -44,6 +44,9 @@ export class AdminAddMemberComponent implements OnInit{
       })
       this.addMemberForm.reset()
 
+    }
+    else{
+      alert('Please fill all the fields');
     }
 
   }

@@ -6,29 +6,55 @@
             <label for="" class="text-start">Member Name</label>
             <input formControlName="mname" type="text" placeholder="name" name="name" id="a1" class="form-control mt-3">
             
+            <div *ngIf="this.addMemberForm.get('mname')?.errors && this.addMemberForm.get('mname')?.touched">
+                <p class="text-danger">Accept only characters </p>
+              </div>
+
             <label for="" class="mt-3">Member Photo</label>
             <input formControlName="mimage"  type="text" placeholder="image" name="image" id="a2" class="form-control mt-3">
             
+
+            <div *ngIf="this.addMemberForm.get('mimage')?.errors && this.addMemberForm.get('mimage')?.touched">
+                <p class="text-danger">Check the link </p>
+              </div>
+
+
             <label for="" class="mt-3">Member Address</label>
             <!-- <input formControlName="address" type="text" placeholder="" name="address" id="a3" class="form-control mt-3"> -->
             <textarea formControlName="address" name="addresses" placeholder="Address" id="a3" cols="30" rows="10" class="form-control mt-3"></textarea>
 
+            <div *ngIf="this.addMemberForm.get('address')?.errors && this.addMemberForm.get('address')?.touched">
+                <p class="text-danger">Accept only characters </p>
+              </div>
+
             <label for="" class="mt-3">Member Contact No.</label>
             <input formControlName="phn" type="text" placeholder="Phone number" name="cn" id="a4" class="form-control mt-3">
             
+            <div *ngIf="this.addMemberForm.get('phn')?.errors && this.addMemberForm.get('phn')?.touched">
+                <p class="text-danger">Accept only numbers</p>
+              </div>
+
             <!-- <label for="" class="mt-3">Address Proof(Manditory)</label>
             <input formControlName="adproof" type="text" placeholder="image" name="ap" id="a5" class="form-control mt-3"> -->
             
             <label for="" class="mt-3">Identity Proof(Manditory)</label>
             <input formControlName="idproof" type="text" placeholder="Id image" name="ip" id="a6" class="form-control mt-3">
             
+            <div *ngIf="this.addMemberForm.get('idproof')?.errors && this.addMemberForm.get('idproof')?.touched">
+                <p class="text-danger">Check the link </p>
+              </div>
+
             <label for="" class="mt-3">Description</label>
             <input formControlName="description"  type="text" placeholder="description" name="des" id="a7" class="form-control mt-3">
             
+            <div *ngIf="this.addMemberForm.get('description')?.errors && this.addMemberForm.get('description')?.touched">
+                <p class="text-danger">Accept only characters </p>
+              </div>
+
             <button (click)="addmember()" class="btn btn-dark mt-5 text-center">add</button>
         </form>
         </div>
-        <button routerLink="/admin-product-mng" id="btn1" class="btn  ms-3 mb-3">Back
+        <button routerLink="/admin-home" id="btn1" class="btn  ms-3 mb-3">Back
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
         </button>
 </body>

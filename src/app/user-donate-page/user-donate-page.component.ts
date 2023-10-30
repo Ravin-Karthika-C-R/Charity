@@ -13,11 +13,11 @@ export class UserDonatePageComponent implements OnInit{
 
   addFundUserForm=this.fb.group({
     
-    phone:['', [Validators.required, Validators.pattern('[0-9]+')]],
-    amount:['',[Validators.required, Validators.pattern('[0-9]+')]],
-    cardno:['',[Validators.required, Validators.pattern('[0-9]+')]],
-    expdate:['',[Validators.required, Validators.pattern('[0-9/]+')]],
-    cvv:['',[Validators.required, Validators.pattern('[0-9]+')]]
+    phone:[''],
+    amount:[''],
+    cardno:[''],
+    expdate:[''],
+    cvv:['']
 
   })
   userId  :any=""
@@ -92,9 +92,7 @@ export class UserDonatePageComponent implements OnInit{
       dt:this.dt
     }
 
-    
-
-    
+    if(this.addFundUserForm.valid){
       this.ds.donateFundUser(fundData).subscribe({
         next:(result:any)=>{
           // alert(result)
@@ -106,6 +104,13 @@ export class UserDonatePageComponent implements OnInit{
 
         }
       })
+    }
+    else{
+      alert("Invalid")
+    }
+
+    
+      
 
     
     

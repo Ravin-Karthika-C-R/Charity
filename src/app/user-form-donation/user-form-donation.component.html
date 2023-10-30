@@ -54,9 +54,9 @@
             <label for="" class="mt-3">Pick Up Date Time</label>
             <input formControlName="datetime"  type="datetime-local" placeholder="description" name="des" id="a7" class="form-control mt-3" required>
             
-            <!-- <div *ngIf="this.addDonationForm.get('datetime')?.errors && this.addDonationForm.get('datetime')?.touched">
+            <div *ngIf="this.addDonationForm.get('datetime')?.errors && this.addDonationForm.get('datetime')?.touched">
                 <p class="text-danger">Can't be blank </p>
-            </div> -->
+            </div>
 
             <button (click)="adddonation()" class="btn btn-dark mt-5 text-center">Submit</button>
         </form>
@@ -65,7 +65,7 @@
 
 
 
-        <button routerLink="/admin-product-mng" id="btn1" class="btn  ms-3 mb-3">Back
+        <button routerLink="/user-home" id="btn1" class="btn btn-dark ms-3 mb-3">Back
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
         </button>
 </body>
