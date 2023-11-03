@@ -35,6 +35,9 @@ import { UserViewItemDonationComponent } from './user-view-item-donation/user-vi
 import { DatePipe } from '@angular/common';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserEditProfileComponent } from './user-edit-profile/user-edit-profile.component';
+import { UserAppointmentformComponent } from './user-appointmentform/user-appointmentform.component';
+import { UserViewAppointmentformComponent } from './user-view-appointmentform/user-view-appointmentform.component';
+import { AdminManageAppointmentformComponent } from './admin-manage-appointmentform/admin-manage-appointmentform.component';
 
 
 
@@ -69,7 +72,10 @@ import { UserEditProfileComponent } from './user-edit-profile/user-edit-profile.
     FilterPipe,
     UserViewItemDonationComponent,
     UserProfileComponent,
-    UserEditProfileComponent
+    UserEditProfileComponent,
+    UserAppointmentformComponent,
+    UserViewAppointmentformComponent,
+    AdminManageAppointmentformComponent
     
   ],
   imports: [

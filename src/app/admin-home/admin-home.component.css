@@ -53,4 +53,12 @@ body{
     color: rgba(5, 25, 42, 0.704);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
+  .dropdown-menu{
+    background-color: rgb(77, 195, 132);
+    color: #fff;
+  }
+  .dropdown-menu a:hover{
+    background-color: rgb(255, 255, 255);
+   
+  }
 
